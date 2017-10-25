@@ -20,7 +20,6 @@ class CreatePostsTable extends Migration
             //修改 migration 檔案的內容
             $table->text('post');
             $table->timestamps();
-            $table -string('title',500) ->change();
 
         });
     }
