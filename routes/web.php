@@ -64,9 +64,11 @@ Route::get('/test', function () {
     /*
     \App\Post::destroy(2);
     */
+    /*
     $post = new \App\Post();
     $post -> title = 'test title';
     $post -> content ='test content';
     $post -> save();
-
+    */
+    \App\Post::destroy(3,5,7);
 });
