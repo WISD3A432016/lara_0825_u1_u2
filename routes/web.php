@@ -85,18 +85,18 @@ Route::get('/test', function () {
     $lastPost = \App\Post::orderBy('id','DESC') ->first();
     dd($lastPost);
     */
-    /*
+
     $post = \App\Post::find(1);
     foreach ($post->comments as $comment){
         echo $comment->content.'<br>';
     }
-    */
-    
+
+    /*
     $comment = new \App\Comment();
     $comment -> title = 'test title';
     $comment -> content ='test content';
     $comment -> save();
-
+     */
 });
 
 
