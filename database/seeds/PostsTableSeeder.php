@@ -11,6 +11,9 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
+
+        Post::truncate();
+
         //練習2
         foreach(range(1,20) as $number){
             Post::create([
@@ -18,6 +21,5 @@ class PostsTableSeeder extends Seeder
                 'content' => 'content '.$number,
             ]);
         }
-
     }
 }
