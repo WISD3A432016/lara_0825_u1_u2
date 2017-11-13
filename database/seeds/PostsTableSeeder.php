@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Post;
 use Carbon\Carbon;
+use Faker\Factory as Faker;
 class PostsTableSeeder extends Seeder
 {
     /**
@@ -14,16 +15,21 @@ class PostsTableSeeder extends Seeder
     {
 
         Post::truncate();
+        $faker=Faker::create('zh_TW');
 
         //練習2
         foreach(range(1,20) as $number){
             $total=20;
             Post::create([
+                /*
                 'title' => 'title '.$number,
                 'content' => 'content '.$number,
                 'is_feature' => rand(0,1),
                 'created_at' => Carbon::now() ->subDays($total - $number),
                 'updated_at' => Carbon::now() ->subDays($total - $number),
+                */
+                'title' => $faker->sentence,
+                'content' => $faker->paragraph,
             ]);
         }
     }
