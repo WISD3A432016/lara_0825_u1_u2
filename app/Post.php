@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use App\Comment;
 class Post extends Model
 {
     //Exercise1-2：設定 Model
@@ -15,4 +15,9 @@ class Post extends Model
         'content',
         'is_feature'
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
